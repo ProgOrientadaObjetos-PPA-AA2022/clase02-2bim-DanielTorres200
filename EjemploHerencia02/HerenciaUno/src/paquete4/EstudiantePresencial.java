@@ -3,12 +3,18 @@ package paquete4;
 
 public class EstudiantePresencial extends Estudiante{
     
-    int numeroCreditos;
-    double costoCredito;
-    double matriculaPresencial;
+    private int numeroCreditos;
+    private double costoCredito;
+    private double matriculaPresencial;
     
     //  Métodos establecer y calcular para los datos o atributos de la clase
     // 2.  Método establecerNumeroCreditos(numero: Real)
+    
+    public EstudiantePresencial(String n, String ap, String iden, int e){
+        super(n, ap, iden, e);
+    }
+    
+    
     public void establecerNumeroCreditos(int numero){
         numeroCreditos = numero;
     }
@@ -37,6 +43,22 @@ public class EstudiantePresencial extends Estudiante{
     // 7. Método obtenerMatriculaPresencial() : Real
     public double obtenerMatriculaPresencial(){
         return matriculaPresencial;
+    }
+    
+    @Override
+    public String toString(){
+      
+        String cadenaFinal = String.format("%s", super.toString());
+        
+        cadenaFinal = String.format("%s\n"
+                + "Numero Creditos: %s\n"
+                + "Costo Creditos: %s\n"
+                + "Total Matricula Presencial: %.2f\n",
+                cadenaFinal,
+                obtenerNumeroCreditos(),
+                obtenerCostoCredito(),
+                obtenerMatriculaPresencial());
+        return cadenaFinal;
     }
     
 }
