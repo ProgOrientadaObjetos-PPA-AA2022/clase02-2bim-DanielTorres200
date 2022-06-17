@@ -1,21 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package paquete8;
 
-package paquete6;
-
-public class EstudianteDistancia extends Estudiante{
-    
+/**
+ *
+ * @author spart
+ */
+public class EstudiantePresencial extends Estudiante {
     private int numeroAsignaturas;
     private double costoAsignatura;
     private double matriculaDistancia;
     
-    public EstudianteDistancia(String n, String ap, String iden, int e,
+    public EstudiantePresencial(String n, String ap, String iden, int e,
             int numAsg, double costoAsg){
-        super(n, ap, iden, e);
+        super(ap, iden, e); // ap = apellido // iden = identificacion // e = edad
+        establecerNombresEstudiante(n);
         numeroAsignaturas = numAsg;
         costoAsignatura = costoAsg;
     }
     
-    public EstudianteDistancia(String n, String ap, String iden, int e){
-        super(n, ap, iden, e); 
+    @Override
+    public void establecerNombresEstudiante(String nom){
+        nombresEstudiante = nom.toLowerCase(); // Juan.toLowerCase() >> JUAN 
     }
     
     // 2.  Método establecerNumeroAsginaturas(numero: Real)
@@ -60,7 +69,7 @@ public class EstudianteDistancia extends Estudiante{
                 + "Número de Asignaturas: %d\n"
                 + "Total Matricula: %.2f\n",
                 nombresEstudiante,
-                obtenerApellidoEstudiante(), // apellidosEstudiante,
+                apellidosEstudiante,
                 identificacionEstudiante,
                 edadEstudiante,
                 obtenerCostoAsignatura(),
@@ -69,5 +78,4 @@ public class EstudianteDistancia extends Estudiante{
         
         return cadenaFinal;
     }
-
 }

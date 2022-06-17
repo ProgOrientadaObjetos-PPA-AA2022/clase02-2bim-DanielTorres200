@@ -34,7 +34,6 @@ public class Ejecutor1 {
         rd.establecerTotalMatriculasDistancia();
         
         System.out.println("----------------------");
-        System.out.println(rd);
-        
+        System.out.println(rd);    
     }
 }

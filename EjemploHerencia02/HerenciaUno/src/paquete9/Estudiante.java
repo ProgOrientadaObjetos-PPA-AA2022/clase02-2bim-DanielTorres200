@@ -66,8 +66,8 @@ public class Estudiante {
     
     @Override
     public String toString(){
-        String cadena = String.format("Nombre: %s\n"
-                + "Apellido: %s\n"
+        String cadena = String.format("Nombre:%s\n"
+                + "Apellido:%s\n"
                 + "Identificación: %s\n"
                 + "Edad: %s\n", 
                 nombresEstudiante,

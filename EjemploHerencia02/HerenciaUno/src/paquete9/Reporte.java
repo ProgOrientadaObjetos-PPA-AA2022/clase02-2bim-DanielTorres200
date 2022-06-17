@@ -46,5 +46,4 @@ public class Reporte {
     public String obtenerCiclo() {
         return ciclo;
     }
-
 }
